@@ -1,7 +1,8 @@
 cask "rberga06-atlantis-minerva" do
+    require_relative "lib/private_strategy"
     version "09.16.03.10"
-#    sha256 ""
-
+    #    sha256 ""
+    
     url "https://github.com/RBerga06/cern-atlantis-macapp/releases/download/v09.16.03.10/Atlantis-MINERVA.app.zip", :using => GitHubPrivateRepositoryReleaseDownloadStrategy
     name "CERN Minerva (Atlantis) - macOS Wrapper application"
     desc "Mastercalss INvolving Event Recognition Visualized with Atlantis"
