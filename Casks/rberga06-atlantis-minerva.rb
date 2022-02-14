@@ -1,5 +1,5 @@
 cask "rberga06-atlantis-minerva" do
-    require_relative "lib/private_strategy"
+    require_relative "../lib/private_strategy"
     version "09.16.03.10"
     #    sha256 ""
     
