@@ -1,4 +1,4 @@
-cask "atlantis-minerva" do
+cask "rberga06-atlantis-minerva" do
     version "09.16.03.10"
 #    sha256 ""
 
