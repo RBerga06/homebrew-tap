@@ -1,4 +1,4 @@
-require_relative "lib/private_strategy.rb"
+require_relative "lib/private_strategy"
 
 cask "rberga06-atlantis-minerva" do
     version "09.16.03.10"
