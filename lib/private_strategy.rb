@@ -61,7 +61,8 @@ class GitHubPrivateRepositoryDownloadStrategy < CurlDownloadStrategy
   def download_url
     #"https://github.com/RBerga06/files-homebrew-tap/raw/master/Fonts/LOTR.zip"
     #"https://#{@github_token}@github.com/#{@owner}/#{@repo}/raw/master/#{@filepath}"
-    "https://#{@github_token}@api.github.com/repos/#{@owner}/#{@repo}/contents/#{@filepath}"
+    #"https://#{@github_token}@api.github.com/repos/#{@owner}/#{@repo}/contents/#{@filepath}"
+    "raw.githubusercontent.com/#{@user}/#{@repo}/master/#{@path}"
   end
 
   private
