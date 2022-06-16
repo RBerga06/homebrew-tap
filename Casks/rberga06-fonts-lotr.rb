@@ -4,8 +4,8 @@ cask "rberga06-fonts-lotr" do
     version "0.0.1"
 
     url "https://github.com/RBerga06/files-homebrew-tap/raw/master/Fonts/LOTR.zip", :using => GitHubPrivateRepositoryReleaseDownloadStrategy
-    name "CERN Minerva (Atlantis) - macOS Wrapper application"
-    desc "Mastercalss INvolving Event Recognition Visualized with Atlantis"
+    name "LOTR Fonts"
+    desc "Fonts concerning The Lord Of The Rings and The Hobbit"
     homepage "https://www.1001fonts.com/lord-of-the-rings-fonts.html"
 
     font "aniron/__anirb.ttf"
@@ -23,3 +23,4 @@ cask "rberga06-fonts-lotr" do
     font "rm-entrees/rm_entrees.ttf"
     font "tengwaroptime/TengwarOptime.ttf"
     font "tengwaroptime/TengwarOptimeDiagon.ttf"
+end
