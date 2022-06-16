@@ -1,3 +1,5 @@
+# From https://gist.github.com/ZPascal/b21c652b811872b3f56db9d54d61d6c6
+#
 # Save this file as `lib/private_strategy.rb`
 # Add `require_relative "lib/private_strategy"` to your formula.
 # 
@@ -88,7 +90,7 @@ class GitHubPrivateRepositoryDownloadStrategy < CurlDownloadStrategy
     raise CurlDownloadStrategyError, message
   end
 end
-  
+
 # GitHubPrivateRepositoryReleaseDownloadStrategy downloads tarballs from GitHub
 # Release assets. To use it, add
 # `:using => GitHubPrivateRepositoryReleaseDownloadStrategy` to the URL section of
@@ -133,7 +135,8 @@ class GitHubPrivateRepositoryReleaseDownloadStrategy < GitHubPrivateRepositoryDo
   end
 
   def fetch_release_metadata
-    release_url = "https://api.github.com/repos/#{@owner}/#{@repo}/releases/tags/#{@tag}"
-    GitHub::API.open_rest(release_url)
+    #release_url = "https://api.github.com/repos/#{@owner}/#{@repo}/releases/tags/#{@tag}"
+    #GitHub::API.open_rest(release_url)
+    GitHub.get_release(@owner, @repo, @tag)
   end
 end
