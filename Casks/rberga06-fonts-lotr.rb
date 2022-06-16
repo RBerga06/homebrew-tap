@@ -4,7 +4,7 @@ cask "rberga06-fonts-lotr" do
     version "0.0.1"
     sha256 "98853cc608adce80c63b1da414d0d404671fcad488b8bb0196bc65a93003f26f"
 
-    url "https://github.com/RBerga06/files-homebrew-tap/Fonts/LOTR.zip", :using => GitHubPrivateRepositoryDownloadStrategy
+    url "https://github.com/RBerga06/files-homebrew-tap/master/Fonts/LOTR.zip", :using => GitHubPrivateRepositoryDownloadStrategy
     name "LOTR Fonts"
     homepage "https://www.1001fonts.com/lord-of-the-rings-fonts.html"
 

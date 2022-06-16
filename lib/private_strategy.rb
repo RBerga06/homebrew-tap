@@ -51,18 +51,18 @@ class GitHubPrivateRepositoryDownloadStrategy < CurlDownloadStrategy
   end
 
   def parse_url_pattern
-    unless match = url.match(%r{https://github.com/([^/]+)/([^/]+)/(\S+)})
+    unless match = url.match(%r{https://github.com/([^/]+)/([^/]+)/([^/]+)/(\S+)})
       raise CurlDownloadStrategyError, "Invalid url pattern for GitHub Repository."
     end
 
-    _, @owner, @repo, @filepath = *match
+    _, @owner, @repo, @branch, @filepath = *match
   end
 
   def download_url
     #"https://github.com/RBerga06/files-homebrew-tap/raw/master/Fonts/LOTR.zip"
     #"https://#{@github_token}@github.com/#{@owner}/#{@repo}/raw/master/#{@filepath}"
     #"https://#{@github_token}@api.github.com/repos/#{@owner}/#{@repo}/contents/#{@filepath}"
-    "https://#{@github_token}@raw.githubusercontent.com/#{@user}/#{@repo}/master/#{@filepath}"
+    "https://#{@github_token}@raw.githubusercontent.com/#{@user}/#{@repo}/#{@branch}/#{@filepath}"
   end
 
   private
