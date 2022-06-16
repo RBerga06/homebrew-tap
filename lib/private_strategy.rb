@@ -59,7 +59,8 @@ class GitHubPrivateRepositoryDownloadStrategy < CurlDownloadStrategy
   end
 
   def download_url
-    "https://#{@github_token}@github.com/#{@owner}/#{@repo}/#{@filepath}"
+    #"https://#{@github_token}@github.com/#{@owner}/#{@repo}/#{@filepath}"
+    "https://#{@github_token}@api.github.com/repos/#{@owner}/#{@repo}/contents/#{@filepath}"
   end
 
   private

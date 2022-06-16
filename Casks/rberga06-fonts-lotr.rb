@@ -3,7 +3,7 @@ require_relative "../lib/private_strategy"
 cask "rberga06-fonts-lotr" do
     version "0.0.1"
 
-    url "https://#{ENV['HOMEBREW_GITHUB_API_TOKEN']}@github.com/RBerga06/files-homebrew-tap/raw/master/Fonts/LOTR.zip"#, :using => GitHubPrivateRepositoryDownloadStrategy
+    url "https://github.com/RBerga06/files-homebrew-tap/raw/master/Fonts/LOTR.zip", :using => GitHubPrivateRepositoryDownloadStrategy
     name "LOTR Fonts"
     homepage "https://www.1001fonts.com/lord-of-the-rings-fonts.html"
 
