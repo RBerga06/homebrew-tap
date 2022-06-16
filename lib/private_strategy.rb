@@ -62,16 +62,16 @@ class GitHubPrivateRepositoryDownloadStrategy < CurlDownloadStrategy
     #"https://github.com/RBerga06/files-homebrew-tap/raw/master/Fonts/LOTR.zip"
     #"https://#{@github_token}@github.com/#{@owner}/#{@repo}/raw/master/#{@filepath}"
     #"https://#{@github_token}@api.github.com/repos/#{@owner}/#{@repo}/contents/#{@filepath}"
+    ohai "user: #{@user}"
+    ohai "repo: #{@repo}"
+    ohai "branch: #{@branch}"
+    ohai "filepath: #{@filepath}"
     "https://#{@github_token}@raw.githubusercontent.com/#{@user}/#{@repo}/#{@branch}/#{@filepath}"
   end
 
   private
 
   def _fetch(url:, resolved_url:, timeout:)
-    ohai "user: #{@user}"
-    ohai "repo: #{@repo}"
-    ohai "branch: #{@branch}"
-    ohai "filepath: #{@filepath}"
     ohai "π --> #{download_url}"
     curl_download download_url, to: temporary_path
   end
