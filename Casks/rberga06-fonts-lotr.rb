@@ -5,7 +5,6 @@ cask "rberga06-fonts-lotr" do
 
     url "https://github.com/RBerga06/files-homebrew-tap/raw/master/Fonts/LOTR.zip", :using => GitHubPrivateRepositoryReleaseDownloadStrategy
     name "LOTR Fonts"
-    desc "Fonts concerning The Lord Of The Rings and The Hobbit"
     homepage "https://www.1001fonts.com/lord-of-the-rings-fonts.html"
 
     font "aniron/__anirb.ttf"
