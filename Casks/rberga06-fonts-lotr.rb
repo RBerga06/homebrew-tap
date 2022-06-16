@@ -8,8 +8,8 @@ cask "rberga06-fonts-lotr" do
     name "LOTR Fonts"
     homepage "https://www.1001fonts.com/lord-of-the-rings-fonts.html"
 
-    font "LOTR/aniron/__anirb.ttf"
-    font "LOTR/aniron/__anirm.ttf"
+    font "LOTR/aniron/anirb___.ttf"
+    font "LOTR/aniron/anirm___.ttf"
     font "LOTR/elfic-caslin/Elfic Caslon.ttf"
     font "LOTR/elvish-ring-nfi/elvish ring nfi.ttf"
     font "LOTR/fanjofey/fanjo-leoda.ttf"
