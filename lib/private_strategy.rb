@@ -65,13 +65,10 @@ class GitHubPrivateRepositoryDownloadStrategy < CurlDownloadStrategy
     "https://#{@github_token}@raw.githubusercontent.com/#{@user}/#{@repo}/#{@branch}/#{@filepath}"
   end
 
-  def resolved_url
-    download_url
-  end
-
   private
 
   def _fetch(url:, resolved_url:, timeout:)
+    ohai "π --> #{download_url}"
     curl_download download_url, to: temporary_path
   end
 
