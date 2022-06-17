@@ -1,23 +1,18 @@
 require_relative "../lib/private_strategy"
 
-cask "rberga06-fonts-lotr" do
-    version "0.0.1"
-    sha256 "21fe52553d0d4e59807d7d20ed25c5a2094de3673a626b93f98bc593aab93f05"
+cask "rberga06-fonts-runes" do
+    version "1.0.0"
+    sha256 "381673b565ec0cf209a5f28b8f1e6dc9db4b17e1df8ebb91a2842ec25bd2036f"
 
-    url "https://github.com/RBerga06/files-homebrew-tap/master/Fonts/LOTR.zip", :using => GitHubPrivateRepositoryDownloadStrategy
-    name "LOTR Fonts"
-    homepage "https://www.1001fonts.com/lord-of-the-rings-fonts.html"
+    url "https://github.com/RBerga06/files-homebrew-tap/master/empty.zip", :using => GitHubPrivateRepositoryDownloadStrategy;
+    name "A collection of LOTR-inspired fonts"
 
-    # font "LOTR/elfic-caslin/Elfic Caslon.ttf"
-    # font "LOTR/elvish-ring-nfi/elvish ring nfi.ttf"
-    # font "LOTR/fanjofey/fanjo-leoda.ttf"
-    # font "LOTR/fanjofey/fanjofey.ttf"
-    # font "LOTR/greifswalder-tengwar/Greifswalder Tengwar.ttf"
-    # font "LOTR/mediaeval-caps/MediaevalCaps.ttf"
-    # font "LOTR/midjungards/Midjungards.otf"
-    # font "LOTR/morris-roman/MorrisRoman-Black.ttf"
-    # font "LOTR/morris-roman/MorrisRomanAlternate-Black.ttf"
-    # font "LOTR/rm-entrees/rm_entrees.ttf"
-    # font "LOTR/tengwaroptime/TengwarOptime.ttf"
-    # font "LOTR/tengwaroptime/TengwarOptimeDiagon.ttf"
+    depends_on cask: [
+        "rberga06-fonts-runes",
+        "rberga06-font-ringbearer",
+        "rberga06-font-aniron",
+        "rberga06-font-theonering",
+    ]
+
+    stage_only true
 end
