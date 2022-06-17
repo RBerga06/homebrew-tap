@@ -2,7 +2,7 @@ require_relative "../lib/private_strategy"
 
 cask "rberga06-fonts-lotr" do
     version "0.0.1"
-    sha256 "98853cc608adce80c63b1da414d0d404671fcad488b8bb0196bc65a93003f26f"
+    sha256 "21fe52553d0d4e59807d7d20ed25c5a2094de3673a626b93f98bc593aab93f05"
 
     url "https://github.com/RBerga06/files-homebrew-tap/master/Fonts/LOTR.zip", :using => GitHubPrivateRepositoryDownloadStrategy
     name "LOTR Fonts"
