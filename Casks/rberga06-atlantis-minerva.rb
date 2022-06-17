@@ -10,6 +10,7 @@ cask "rberga06-atlantis-minerva" do
 #    homepage "http://www.cern.ch/atlas-minerva"
     homepage "https://github.com/RBerga06/cern-atlantis-macapp"
 
-    app "Atlantis (MINERVA).app"
     depends_on cask: "temurin8"
+
+    app "Atlantis (MINERVA).app"
 end
