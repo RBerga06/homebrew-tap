@@ -13,6 +13,7 @@ cask "rberga06-fonts-runes" do
         "rberga06-font-aniron",
         "rberga06-font-theonering",
         "rberga06-font-elfic-caslin",
+        "rberga06-font-elvish-ring-nfi",
     ]
 
     stage_only true
