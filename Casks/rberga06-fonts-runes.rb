@@ -2,7 +2,7 @@ require_relative "../lib/private_strategy"
 
 cask "rberga06-fonts-runes" do
     version "1.0.0"
-    url "https://github.com/RBerga06/files-homebrew-tap/master/Fonts/Runes.txt"; :using => GitHubPrivateRepositoryReleaseDownloadStrategy,
+    url "https://github.com/RBerga06/files-homebrew-tap/master/Fonts/Runes.txt", :using => GitHubPrivateRepositoryReleaseDownloadStrategy;
     name "A collection of runic Fonts"
 
     depends_on cask: [
