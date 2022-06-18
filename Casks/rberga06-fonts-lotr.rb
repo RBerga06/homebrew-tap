@@ -15,6 +15,7 @@ cask "rberga06-fonts-runes" do
         "rberga06-font-elfic-caslin",
         "rberga06-font-elvish-ring-nfi",
         "rberga06-font-fanjofey",
+        "rberga06-font-greifswalder-tengwar",
     ]
 
     stage_only true
