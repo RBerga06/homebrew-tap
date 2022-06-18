@@ -1,6 +1,6 @@
 require_relative "../lib/private_strategy"
 
-cask "rberga06-fonts-runes" do
+cask "rberga06-fonts-lotr" do
     version "1.0.0"
     sha256 "381673b565ec0cf209a5f28b8f1e6dc9db4b17e1df8ebb91a2842ec25bd2036f"
 
