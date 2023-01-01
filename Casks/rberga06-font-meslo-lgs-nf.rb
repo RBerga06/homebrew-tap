@@ -8,8 +8,8 @@ cask "rberga06-font-meslo-lgs-nf" do
     name "MesloLGS Nerd Font (enhanced for powerlevel10k)"
     #homepage "https://github.com/ryanoasis/nerd-fonts"
   
-    font "MesloLGS NF/MesloLGS NF Bold Italic.ttf"
-    font "MesloLGS NF/MesloLGS NF Bold.ttf"
-    font "MesloLGS NF/MesloLGS NF Italic.ttf"
-    font "MesloLGS NF/MesloLGS NF Regular.ttf"
+    font "MesloLGS NF Bold Italic.ttf"
+    font "MesloLGS NF Bold.ttf"
+    font "MesloLGS NF Italic.ttf"
+    font "MesloLGS NF Regular.ttf"
 end
