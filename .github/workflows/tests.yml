@@ -1,8 +1,8 @@
 name: brew test-bot
 on:
-  # push:
-  #   branches:
-  #     - master
+  push:
+    branches:
+      - master
   pull_request:
 jobs:
   test-bot:
