@@ -1,5 +1,7 @@
 # RBerga06's Homebrew Tap
 
+[![brew test-bot](https://github.com/RBerga06/homebrew-tap/actions/workflows/tests.yml/badge.svg)](https://github.com/RBerga06/homebrew-tap/actions/workflows/tests.yml)
+
 ## How do I install these formulae?
 
 `brew install rberga06/tap/<formula>`
