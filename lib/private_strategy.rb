@@ -1,3 +1,5 @@
+# frozen_string_literal: false
+
 # From https://gist.github.com/ZPascal/b21c652b811872b3f56db9d54d61d6c6
 #
 # Save this file as `lib/private_strategy.rb`
@@ -105,11 +107,11 @@ class GitHubPrivateRepositoryReleaseDownloadStrategy < GitHubPrivateRepositoryDo
 
   def parse_url_pattern
     url_pattern = %r{https://github.com/([^/]+)/([^/]+)/releases/download/([^/]+)/(\S+)}
-    unless @url =~ url_pattern
+    unless (match = @url.match(url_pattern))
       raise CurlDownloadStrategyError, "Invalid url pattern for GitHub Release."
     end
 
-    _, @owner, @repo, @tag, @filename = *@url.match(url_pattern)
+    _, @owner, @repo, @tag, @filename = *match
   end
 
   def download_url
