@@ -6,6 +6,7 @@ cask "rberga06-font-fanjofey" do
 
   url "https://github.com/RBerga06/files-homebrew-tap/master/Fonts/Fanjofey.zip", using: GitHubPrivateRepositoryDownloadStrategy
   name "Fanjofey"
+  homepage "https://github.com/RBerga06/files-homebrew-tap"
 
   font "fanjo-leoda.ttf"
   font "fanjofey.ttf"

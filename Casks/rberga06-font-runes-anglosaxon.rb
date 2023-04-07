@@ -6,6 +6,7 @@ cask "rberga06-font-runes-anglosaxon" do
 
   url "https://github.com/RBerga06/files-homebrew-tap/master/Fonts/AngloSaxon%20Runes.zip", using: GitHubPrivateRepositoryDownloadStrategy
   name "Anglo-Saxon Runes font"
+  homepage "https://github.com/RBerga06/files-homebrew-tap"
 
   font "AnglosaxonRunes-VGne.ttf"
   font "AnglosaxonRunes1-JRKK.ttf"

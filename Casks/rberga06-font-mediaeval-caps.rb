@@ -6,6 +6,7 @@ cask "rberga06-font-mediaeval-caps" do
 
   url "https://github.com/RBerga06/files-homebrew-tap/master/Fonts/Mediaeval%20Caps.zip", using: GitHubPrivateRepositoryDownloadStrategy
   name "Mediaeval Caps"
+  homepage "https://github.com/RBerga06/files-homebrew-tap"
 
   font "MediaevalCaps.ttf"
 end

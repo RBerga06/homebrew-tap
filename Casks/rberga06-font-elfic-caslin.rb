@@ -6,6 +6,7 @@ cask "rberga06-font-elfic-caslin" do
 
   url "https://github.com/RBerga06/files-homebrew-tap/master/Fonts/Elfic%20Caslin.zip", using: GitHubPrivateRepositoryDownloadStrategy
   name "Elfic Caslin"
+  homepage "https://github.com/RBerga06/files-homebrew-tap"
 
   font "Elfic Caslon.ttf"
 end

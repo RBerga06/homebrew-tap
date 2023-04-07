@@ -6,6 +6,7 @@ cask "rberga06-fonts-lotr" do
 
   url "https://github.com/RBerga06/files-homebrew-tap/master/empty.zip", using: GitHubPrivateRepositoryDownloadStrategy
   name "A collection of LOTR-inspired fonts"
+  homepage "https://github.com/RBerga06/files-homebrew-tap"
 
   depends_on cask: %w[
     rberga06-fonts-runes

@@ -6,6 +6,7 @@ cask "rberga06-font-aniron" do
 
   url "https://github.com/RBerga06/files-homebrew-tap/master/Fonts/Aniron.zip", using: GitHubPrivateRepositoryDownloadStrategy
   name "Aniron"
+  homepage "https://github.com/RBerga06/files-homebrew-tap"
 
   font "anirb___.ttf"
   font "anirm___.ttf"

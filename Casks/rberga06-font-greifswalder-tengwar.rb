@@ -6,6 +6,7 @@ cask "rberga06-font-greifswalder-tengwar" do
 
   url "https://github.com/RBerga06/files-homebrew-tap/master/Fonts/Greifswalder%20Tengwar.zip", using: GitHubPrivateRepositoryDownloadStrategy
   name "Greifswalder Tengwar"
+  homepage "https://github.com/RBerga06/files-homebrew-tap"
 
   font "Greifswalder Tengwar.ttf"
 end

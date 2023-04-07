@@ -6,6 +6,7 @@ cask "rberga06-font-runes-germanic" do
 
   url "https://github.com/RBerga06/files-homebrew-tap/master/Fonts/Germanic%20Runes.zip", using: GitHubPrivateRepositoryDownloadStrategy
   name "Germanic Runes"
+  homepage "https://github.com/RBerga06/files-homebrew-tap"
 
   font "GermanicRunes-6YG1.ttf"
   font "GermanicRunes1-ywxV.ttf"

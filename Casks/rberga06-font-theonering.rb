@@ -6,6 +6,7 @@ cask "rberga06-font-theonering" do
 
   url "https://github.com/RBerga06/files-homebrew-tap/master/Fonts/TheOneRing.zip", using: GitHubPrivateRepositoryDownloadStrategy
   name "The One Ring"
+  homepage "https://github.com/RBerga06/files-homebrew-tap"
 
   font "Theonering.ttf"
 end

@@ -6,6 +6,7 @@ cask "rberga06-font-elvish-ring-nfi" do
 
   url "https://github.com/RBerga06/files-homebrew-tap/master/Fonts/Elvish%20Ring%20NFI.zip", using: GitHubPrivateRepositoryDownloadStrategy
   name "Elvish Ring NFI"
+  homepage "https://github.com/RBerga06/files-homebrew-tap"
 
   font "elvish ring nfi.ttf"
 end
