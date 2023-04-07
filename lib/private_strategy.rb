@@ -2,7 +2,7 @@
 #
 # Save this file as `lib/private_strategy.rb`
 # Add `require_relative "lib/private_strategy"` to your formula.
-# 
+#
 # This is based on the following, with minor fixes.
 # https://github.com/Homebrew/brew/blob/193af1442f6b9a19fa71325160d0ee2889a1b6c9/Library/Homebrew/compat/download_strategy.rb#L48-L157
 
@@ -51,7 +51,7 @@ class GitHubPrivateRepositoryDownloadStrategy < CurlDownloadStrategy
   end
 
   def parse_url_pattern
-    unless match = url.match(%r{https://github.com/([^/]+)/([^/]+)/([^/]+)/(\S+)})
+    unless (match = url.match(%r{https://github.com/([^/]+)/([^/]+)/([^/]+)/(\S+)}))
       raise CurlDownloadStrategyError, "Invalid url pattern for GitHub Repository."
     end
 
@@ -59,8 +59,8 @@ class GitHubPrivateRepositoryDownloadStrategy < CurlDownloadStrategy
   end
 
   def download_url
-    #"https://#{@github_token}@github.com/#{@owner}/#{@repo}/raw/master/#{@filepath}"
-    #"https://#{@github_token}@api.github.com/repos/#{@owner}/#{@repo}/contents/#{@filepath}"
+    # "https://#{@github_token}@github.com/#{@owner}/#{@repo}/raw/master/#{@filepath}"
+    # "https://#{@github_token}@api.github.com/repos/#{@owner}/#{@repo}/contents/#{@filepath}"
     "https://#{@github_token}@raw.githubusercontent.com/#{@owner}/#{@repo}/#{@branch}/#{@filepath}"
   end
 
@@ -71,7 +71,7 @@ class GitHubPrivateRepositoryDownloadStrategy < CurlDownloadStrategy
   end
 
   def set_github_token
-    @github_token = ENV["HOMEBREW_GITHUB_API_TOKEN"]
+    @github_token = ENV.fetch("HOMEBREW_GITHUB_API_TOKEN")
     unless @github_token
       raise CurlDownloadStrategyError, "Environmental variable HOMEBREW_GITHUB_API_TOKEN is required."
     end
@@ -83,7 +83,7 @@ class GitHubPrivateRepositoryDownloadStrategy < CurlDownloadStrategy
     # Test access to the repository
     GitHub.repository(@owner, @repo)
   rescue GitHub::API::HTTPNotFoundError
-    # We switched to GitHub::API::HTTPNotFoundError, 
+    # We switched to GitHub::API::HTTPNotFoundError,
     # because we can now handle bad credentials messages
     message = <<~EOS
       HOMEBREW_GITHUB_API_TOKEN can not access the repository: #{@owner}/#{@repo}
@@ -137,8 +137,8 @@ class GitHubPrivateRepositoryReleaseDownloadStrategy < GitHubPrivateRepositoryDo
   end
 
   def fetch_release_metadata
-    #release_url = "https://api.github.com/repos/#{@owner}/#{@repo}/releases/tags/#{@tag}"
-    #GitHub::API.open_rest(release_url)
+    # release_url = "https://api.github.com/repos/#{@owner}/#{@repo}/releases/tags/#{@tag}"
+    # GitHub::API.open_rest(release_url)
     GitHub.get_release(@owner, @repo, @tag)
   end
 end

@@ -6,12 +6,11 @@ cask "rberga06-atlantis" do
 
   url "https://github.com/RBerga06/cern-atlantis-macapp/releases/download/v#{version}/Atlantis.app.zip", using: GitHubPrivateRepositoryReleaseDownloadStrategy
   name "CERN Atlantis - macOS Wrapper application"
-  desc "An official event display for the ATLAS experiment at CERN's Large Hadron Collider."
+  desc "Official event display for the ATLAS experiment at CERN's Large Hadron Collider"
   # homepage "http://www.cern.ch/atlantis"
   homepage "https://github.com/RBerga06/cern-atlantis-macapp"
 
   depends_on cask: "temurin8"
 
   app "Atlantis.app"
-
 end

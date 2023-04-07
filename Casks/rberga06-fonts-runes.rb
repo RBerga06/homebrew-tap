@@ -7,11 +7,11 @@ cask "rberga06-fonts-runes" do
   url "https://github.com/RBerga06/files-homebrew-tap/master/empty.zip", using: GitHubPrivateRepositoryDownloadStrategy;
   name "A collection of runic Fonts"
 
-  depends_on cask: [
-      "rberga06-font-runes-anglosaxon",
-      "rberga06-font-runes-germanic",
-      "rberga06-font-runes-dwarf",
-  ]
+  depends_on cask: %w(
+    rberga06-font-runes-anglosaxon
+    rberga06-font-runes-germanic
+    rberga06-font-runes-dwarf
+  )
 
   stage_only true
 end

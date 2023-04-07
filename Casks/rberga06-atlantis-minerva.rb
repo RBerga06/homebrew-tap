@@ -9,7 +9,7 @@ cask "rberga06-atlantis-minerva" do
   desc "Mastercalss INvolving Event Recognition Visualized with Atlantis"
   # homepage "http://www.cern.ch/atlas-minerva"
   homepage "https://github.com/RBerga06/cern-atlantis-macapp"
-  
+
   depends_on cask: "temurin8"
 
   app "Atlantis (MINERVA).app"
