@@ -8,4 +8,4 @@ cask "rberga06-vegachess" do
     homepage "https://www.vegachess.com/"
 
     app "Vega.app"
-  end
+end
