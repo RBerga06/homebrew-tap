@@ -4,7 +4,7 @@ cask "rberga06-fonts-lotr" do
   version "1.0.0"
   sha256 :no_check
 
-  url "https://github.com/RBerga06/files-homebrew-tap/master/empty.zip"
+  url "https://github.com/RBerga06/files-homebrew-tap/raw/master/empty.zip"
   name "A collection of LOTR-inspired fonts"
   homepage "https://github.com/RBerga06/files-homebrew-tap"
 
