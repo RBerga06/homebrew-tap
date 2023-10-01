@@ -1,5 +1,3 @@
-require_relative "../lib/private_strategy"
-
 cask "rberga06-font-theonering" do
   version "1.0.0"
   sha256 :no_check

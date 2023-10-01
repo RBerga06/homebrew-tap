@@ -1,5 +1,3 @@
-require_relative "../lib/private_strategy"
-
 cask "rberga06-atlantis-minerva" do
   version "09.16.03.10"
   sha256 "cf061a905195ec7cf49700ead7be132abf12a0fa688fa41724249598c6452fc7"
