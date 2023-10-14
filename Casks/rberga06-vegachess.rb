@@ -1,5 +1,5 @@
 cask "rberga06-vegachess" do
-  version "latest"
+  version :latest
   sha256 :no_check
 
   url "http://www.vegachess.com/download/Vega.dmg"
