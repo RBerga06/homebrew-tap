@@ -33,7 +33,7 @@ class Rberga06Manim < Formula
   def install
     pythons.each do |python|
       python_exe = python.opt_libexec/"bin/python"
-      system python_exe, "-m", "pip", "install", *std_pip_args, "poetry-core"
+      system python_exe, "-m", "pip", "install", *std_pip_args, "poetry"
       system python_exe, "-m", "pip", "install", *std_pip_args, "."
     end
   end
