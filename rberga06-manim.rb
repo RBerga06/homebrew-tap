@@ -1,4 +1,4 @@
-class RBerga06Manim < Formula
+class Rberga06Manim < Formula
   include Language::Python::Virtualenv
 
   desc "Community maintained Python library for creating mathematical animations"
