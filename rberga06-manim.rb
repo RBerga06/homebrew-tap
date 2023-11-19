@@ -1,16 +1,22 @@
 # Documentation: https://docs.brew.sh/Formula-Cookbook
 #                https://rubydoc.brew.sh/Formula
 # PLEASE REMOVE ALL GENERATED COMMENTS BEFORE SUBMITTING YOUR PULL REQUEST!
-class Rberga06Manim < Formula
+class RBerga06Manim < Formula
   include Language::Python::Virtualenv
 
-  desc ""
-  homepage ""
+  desc "Manim CE: A community maintained Python library for creating mathematical animations."
+  homepage "https://www.manim.community/"
   url "https://files.pythonhosted.org/packages/2d/bc/71ac84b665f2d2f0d77f52bacb367224e04f7e5c24536beadcdc9147a0c2/manim-0.18.0-py3-none-any.whl"
   sha256 "56f598c66292d78ef11c56af54e06cf5203b8e227b76563f60177a2b4fa36719"
   license ""
 
-  depends_on "python"
+  depends_on "python@3.12"
+  depends_on "py3cairo"
+  depends_on "ffmpeg"
+  depends_on "pango"
+  depends_on "pkg-config"
+  depends_on "scipy"
+  depends_on "basictex" => :recommended
 
   def install
     # ENV.deparallelize  # if your formula fails when building in parallel
