@@ -9,19 +9,19 @@ class RBerga06Manim < Formula
   # head "https://github.com/ManimCommunity/manim.git", branch: "main"
 
   # Build/Test dependencies
-  depends_on "python@3.12" => [:build, :test]
-  depends_on "python@3.11" => [:build, :test]
   depends_on "python-setuptools" => :build
+  depends_on "python@3.11" => [:build, :test]
+  depends_on "python@3.12" => [:build, :test]
   # Runtime dependencies
-  depends_on "pkg-config"
   depends_on "ffmpeg"
-  depends_on "pango"
   depends_on "numpy"
-  depends_on "python-click"
+  depends_on "pango"
   depends_on "pillow"
+  depends_on "pkg-config"
   depends_on "py3cairo"
-  depends_on "python-networkx"
   depends_on "pygments"
+  depends_on "python-click"
+  depends_on "python-networkx"
   depends_on "scipy"
   # Recommended dependencies
   depends_on "basictex" => :recommended
