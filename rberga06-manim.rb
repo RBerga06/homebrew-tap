@@ -10,7 +10,7 @@ class Rberga06Manim < Formula
 
   # Build/Test dependencies
   depends_on "python-setuptools" => :build
-  depends_on "python@3.11" => [:build, :test]
+  #depends_on "python@3.11" => [:build, :test]
   depends_on "python@3.12" => [:build, :test]
   # Runtime dependencies
   depends_on "ffmpeg"
@@ -33,6 +33,7 @@ class Rberga06Manim < Formula
   def install
     pythons.each do |python|
       python_exe = python.opt_libexec/"bin/python"
+      system python_exe, "-m", "pip", "install", *std_pip_args, "--upgrade", "pip"
       system python_exe, "-m", "pip", "install", *std_pip_args, "poetry"
       system python_exe, "-m", "pip", "install", *std_pip_args, "."
     end
