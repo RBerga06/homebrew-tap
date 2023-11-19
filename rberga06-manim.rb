@@ -12,19 +12,19 @@ class RBerga06Manim < Formula
   # System dependencies
   depends_on "ffmpeg"
   depends_on "pango"
-  depends_on "pkg-config"
   # Python itself
   depends_on "python@3.12" => [:build, :test]
-  depends_on "python-setuptools" => :build
   # depends_on "python@3.11" => [:build, :test]
+  depends_on "python-setuptools" => :build
+  depends_on "pkg-config"
   # Python packages
-  depends_on "python-click"
   depends_on "numpy"
+  depends_on "python-click"
   depends_on "pillow"
-  depends_on "scipy"
   depends_on "py3cairo"
   depends_on "python-networkx"
   depends_on "pygments"
+  depends_on "scipy"
   # Recommended dependencies
   depends_on "basictex" => :recommended
   # Optional dependencies
@@ -35,8 +35,6 @@ class RBerga06Manim < Formula
   end
 
   def install
-    # # ENV.deparallelize  # if your formula fails when building in parallel
-    # virtualenv_install_with_resources
     pythons.each do |python|
       python_exe = python.opt_libexec/"bin/python"
       system python_exe, "-m", "pip", "install", *std_pip_args, "."
@@ -44,17 +42,6 @@ class RBerga06Manim < Formula
   end
 
   test do
-    # `test do` will create, run in and delete a temporary directory.
-    #
-    # This test will fail and we won't accept that! For Homebrew/homebrew-core
-    # this will need to be a test that verifies the functionality of the
-    # software. Run the test with `brew test rberga06-manim`. Options passed
-    # to `brew install` such as `--HEAD` also need to be provided to `brew test`.
-    #
-    # The installed folder is not in the path, so use the entire path to any
-    # executables being tested: `system "#{bin}/program", "do", "something"`.
-    # system "false"
-
     pythons.each do |python|
       python_exe = python.opt_libexec/"bin/python"
       system python_exe, "-c", "import manim"
