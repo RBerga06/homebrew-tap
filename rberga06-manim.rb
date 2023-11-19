@@ -6,7 +6,7 @@ class Rberga06Manim < Formula
   url "https://files.pythonhosted.org/packages/2d/bc/71ac84b665f2d2f0d77f52bacb367224e04f7e5c24536beadcdc9147a0c2/manim-0.18.0-py3-none-any.whl"
   sha256 "56f598c66292d78ef11c56af54e06cf5203b8e227b76563f60177a2b4fa36719"
   license "MIT"
-  # head "https://github.com/ManimCommunity/manim.git", branch: "main"
+  head "https://github.com/ManimCommunity/manim.git", branch: "main"
 
   # Build/Test dependencies
   depends_on "python-setuptools" => :build
