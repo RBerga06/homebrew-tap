@@ -23,8 +23,6 @@ class Rberga06Manim < Formula
   depends_on "python-click"
   depends_on "python-networkx"
   depends_on "scipy"
-  # Recommended dependencies
-  depends_on "basictex" => :recommended
   # Optional dependencies
   depends_on "jupyterlab" => :optional
 
