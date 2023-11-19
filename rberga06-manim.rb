@@ -4,7 +4,7 @@ class Rberga06Manim < Formula
   desc "Community maintained Python library for creating mathematical animations"
   homepage "https://www.manim.community/"
   url "https://files.pythonhosted.org/packages/06/62/7802597b93048a8ab543d835338739ce8f4e96e0410b63e29c86deb7cceb/manim-0.18.0.tar.gz"
-  sha256 "56f598c66292d78ef11c56af54e06cf5203b8e227b76563f60177a2b4fa36719"
+  sha256 "56788066bc1aec2471a988c91e337194fd38d1035ed1b4d10838bfe64bd26af8"
   license "MIT"
   head "https://github.com/ManimCommunity/manim.git", branch: "main"
 
