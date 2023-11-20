@@ -14,7 +14,7 @@ class Rberga06Manim < Formula
   depends_on "ffmpeg"
   depends_on "numpy"
   depends_on "pango"
-  depends_on "pillow"
+  # NOTE: 'depends_on "pillow"' breaks installation, because of permission errors
   depends_on "pkg-config"
   depends_on "py3cairo"
   depends_on "pygments"
