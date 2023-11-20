@@ -32,7 +32,7 @@ class Rberga06Manim < Formula
   def install
     pythons.each do |python|
       python_exe = python.opt_libexec/"bin/python"
-      system "pwd"
+      pwd
       system "ls", "."
       system "false"
       system python_exe, "-m", "pip", "install", *std_pip_args, "."
