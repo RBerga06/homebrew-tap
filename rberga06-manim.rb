@@ -32,7 +32,10 @@ class Rberga06Manim < Formula
   def install
     pythons.each do |python|
       python_exe = python.opt_libexec/"bin/python"
-      system python_exe, "-m", "pip", "install", *std_pip_args, "manim-0.18.0-py3-none-any.whl"
+      pip_args = std_pip_args()
+      pip_args.remove("--no-deps")
+      pip_args.remove("--ignore-installed")
+      system python_exe, "-m", "pip", "install", *pip_args, "manim-0.18.0-py3-none-any.whl"
     end
   end
 
