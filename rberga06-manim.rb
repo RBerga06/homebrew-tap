@@ -9,19 +9,19 @@ class Rberga06Manim < Formula
   head "https://github.com/ManimCommunity/manim.git", branch: "main"
 
   # Build/Test dependencies
-  # todo: depends_on "python-setuptools" => :build
+  # TODO: depends_on "python-setuptools" => :build
   depends_on "python@3.12" => [:build, :test]
   # Runtime dependencies
   depends_on "ffmpeg"
-  # todo: depends_on "numpy"
+  # TODO: depends_on "numpy"
   depends_on "pango"
-  # todo: depends_on "pillow"
+  # TODO: depends_on "pillow"
   depends_on "pkg-config"
   depends_on "py3cairo"
-  # todo: depends_on "pygments"
-  # todo: depends_on "python-click"
-  # todo: depends_on "python-networkx"
-  # todo: depends_on "scipy"
+  # TODO: depends_on "pygments"
+  # TODO: depends_on "python-click"
+  # TODO: depends_on "python-networkx"
+  # TODO: depends_on "scipy"
   # Optional dependencies
   depends_on "jupyterlab" => :optional
 
