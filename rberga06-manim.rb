@@ -9,7 +9,7 @@ class Rberga06Manim < Formula
   head "https://github.com/ManimCommunity/manim.git", branch: "main"
 
   # Build/Test dependencies
-  # TODO: depends_on "python-setuptools" => :build
+  depends_on "python-setuptools" => :build
   depends_on "python@3.12" => [:build, :test]
   # Runtime dependencies
   depends_on "ffmpeg"
