@@ -13,15 +13,15 @@ class Rberga06Manim < Formula
   depends_on "python@3.12" => [:build, :test]
   # Runtime dependencies
   depends_on "ffmpeg"
-  # TODO: depends_on "numpy"
+  depends_on "numpy"
   depends_on "pango"
   # TODO: depends_on "pillow"
   depends_on "pkg-config"
   depends_on "py3cairo"
-  # TODO: depends_on "pygments"
-  # TODO: depends_on "python-click"
-  # TODO: depends_on "python-networkx"
-  # TODO: depends_on "scipy"
+  depends_on "pygments"
+  depends_on "python-click"
+  depends_on "python-networkx"
+  depends_on "scipy"
   # Optional dependencies
   depends_on "jupyterlab" => :optional
 
@@ -32,7 +32,7 @@ class Rberga06Manim < Formula
   def install
     pythons.each do |python|
       python_exe = python.opt_libexec/"bin/python"
-      pip_args = std_pip_args - ["--no-deps", "--ignore-installed"]
+      pip_args = std_pip_args - ["--no-deps", "--ignore-installed", "--no-binary=:all:"]
       system python_exe, "-m", "pip", "install", *pip_args, "manim-0.18.0-py3-none-any.whl"
     end
   end
