@@ -31,9 +31,9 @@ class Rberga06Manim < Formula
 
   def install
     pythons.each do |python|
-      system "sudo", "chown", "-R", "#{ENV["USER"]}", "#{ENV["HOMEBREW_PREFIX"]}/lib/python#{version}"
+      # system "chown", "-R", "#{ENV["USER"]}", "#{ENV["HOMEBREW_PREFIX"]}/lib/python#{version}"
       python_exe = python.opt_libexec/"bin/python"
-      pip_args = std_pip_args - ["--no-deps", "--ignore-installed", "--no-binary=:all:"]
+      pip_args = std_pip_args - ["--no-deps", "--no-binary=:all:"]
       system python_exe, "-m", "pip", "install", *pip_args, "manim-0.18.0-py3-none-any.whl"
     end
   end
