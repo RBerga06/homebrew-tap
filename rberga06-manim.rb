@@ -14,7 +14,7 @@ class Rberga06Manim < Formula
   depends_on "ffmpeg"
   depends_on "numpy"
   depends_on "pango"
-  # NOTE: 'depends_on "pillow"' breaks installation, because of permission errors
+  depends_on "pillow"
   depends_on "pkg-config"
   depends_on "py3cairo"
   depends_on "pygments"
@@ -31,6 +31,8 @@ class Rberga06Manim < Formula
 
   def install
     pythons.each do |python|
+      whoami = shell_output("whoami").strip
+      system "sudo", "chown", "-R", whoami, "#{ENV["HOMEBREW_PREFIX"]}/lib/python#{version}"
       python_exe = python.opt_libexec/"bin/python"
       pip_args = std_pip_args - ["--no-deps", "--ignore-installed", "--no-binary=:all:"]
       system python_exe, "-m", "pip", "install", *pip_args, "manim-0.18.0-py3-none-any.whl"
