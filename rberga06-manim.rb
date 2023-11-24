@@ -40,10 +40,12 @@ class Rberga06Manim < Formula
       pth_contents = "import site; site.addsitedir('#{libexec/site_packages}')\n"
       (prefix/site_packages/"homebrew-rberga06-manim.pth").write pth_contents
 
-      # Install symlinks
+      # Install versioned symlinks
       pyversion = Language::Python.major_minor_version(python_exe)
       bin.install libexec/"bin"/"manim" => "manim-#{pyversion}"
       next if python != pythons.max_by(&:version)
+
+      # Install unversioned symlink
       bin.install_symlink "manim-#{pyversion}" => "manim"
     end
   end
