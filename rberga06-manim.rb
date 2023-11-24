@@ -31,16 +31,26 @@ class Rberga06Manim < Formula
 
   def install
     pythons.each do |python|
-      # system "chown", "-R", "#{ENV["USER"]}", "#{ENV["HOMEBREW_PREFIX"]}/lib/python#{version}"
-      python_exe = python.opt_libexec/"bin/python"
-      pip_args = std_pip_args - ["--no-deps", "--no-binary=:all:"]
+      python_exe = python.opt_libexec/"bin"/"python"
+      pip_args = std_pip_args(prefix: libexec) - ["--no-deps", "--no-binary=:all:"]
       system python_exe, "-m", "pip", "install", *pip_args, "manim-0.18.0-py3-none-any.whl"
+
+      # Add manim libexec to $PYTHONPATH
+      site_packages = Language::Python.site_packages(python_exe)
+      pth_contents = "import site; site.addsitedir('#{libexec/site_packages}')\n"
+      (prefix/site_packages/"homebrew-rberga06-manim.pth").write pth_contents
+
+      # Install symlinks
+      pyversion = Language::Python.major_minor_version(python_exe)
+      bin.install libexec/"bin"/"manim" => "manim-#{pyversion}"
+      next if python != pythons.max_by(&:version)
+      bin.install_symlink "manim-#{pyversion}" => "manim"
     end
   end
 
   test do
     pythons.each do |python|
-      python_exe = python.opt_libexec/"bin/python"
+      python_exe = python.opt_libexec/"bin"/"python"
       system python_exe, "-c", "import manim"
     end
   end
