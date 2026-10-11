@@ -709,7 +709,7 @@ class TectonicBiber < Formula
       \printbibliography
       \end{document}
     LATEX
-    system formula_opt_bin("texlive")/"tectonic", "--keep-intermediates", testpath/"test.latex"
+    system formula_opt_bin("tectonic")/"tectonic", "--keep-intermediates", testpath/"test.latex"
     assert_path_exists testpath/"test.bbl"
   end
 end
