@@ -20,6 +20,7 @@ class TectonicBiber < Formula
   # - the ubuntu-latest gha runner provides a newer version,
   # - the macos-latest gha runner provides a compatible version.
   depends_on :macos # for now, until we can pin perl in the build process.
+  # note: this is a workaround, of course!
 
   uses_from_macos "libxml2"
   uses_from_macos "libxslt"
