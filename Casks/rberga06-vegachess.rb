@@ -7,5 +7,7 @@ cask "rberga06-vegachess" do
   desc "Very intuitive and widespread software for chess tournaments management"
   homepage "https://www.vegachess.com/"
 
+  depends_on :macos
   app "Vega.app"
+
 end
