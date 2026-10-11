@@ -8,6 +8,6 @@ cask "rberga06-vegachess" do
   homepage "https://www.vegachess.com/"
 
   depends_on :macos
-  app "Vega.app"
 
+  app "Vega.app"
 end
