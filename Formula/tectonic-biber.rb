@@ -4,6 +4,7 @@ class TectonicBiber < Formula
   url "https://github.com/plk/biber/archive/refs/tags/v2.17.tar.gz"
   sha256 "1ee7efdd8343e982046f2301c1b0dcf09e1f9a997ac86ed1018dcb41d04c9e88"
   license "Artistic-2.0"
+  revision 1
 
   bottle do
     root_url "https://github.com/RBerga06/homebrew-tap/releases/download/tectonic-biber-2.17"
@@ -682,7 +683,7 @@ class TectonicBiber < Formula
     system "./Build"
     system "./Build", "install"
     bin.env_script_all_files(libexec/"bin", PERL5LIB: runtime_perl5lib)
-    bin.install bin/"biber" => "tectonic-biber"
+    mv(bin/"biber", bin/"tectonic-biber")
     (pkgshare/"test").install "t/tdata/annotations.bcf", "t/tdata/annotations.bib"
   end
 
