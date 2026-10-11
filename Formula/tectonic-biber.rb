@@ -16,7 +16,10 @@ class TectonicBiber < Formula
 
   depends_on "pkgconf" => :build
   depends_on "tectonic" => :test
-  depends_on :macos # for now, because this package requires perl <=5.35 while ubuntu-latest github runner provides a newer one.
+  # Building this package requires perl <=5.35. However:
+  # - the ubuntu-latest gha runner provides a newer version,
+  # - the macos-latest gha runner provides a compatible version.
+  depends_on :macos # for now, until we can pin perl in the build process.
 
   uses_from_macos "libxml2"
   uses_from_macos "libxslt"
