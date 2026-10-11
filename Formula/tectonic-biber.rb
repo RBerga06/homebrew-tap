@@ -16,7 +16,7 @@ class TectonicBiber < Formula
 
   depends_on "pkgconf" => :build
   depends_on "tectonic" => :test
-  depends_on :macos # for now
+  depends_on :macos # for now, because this package requires perl <=5.35.
 
   uses_from_macos "libxml2"
   uses_from_macos "libxslt"

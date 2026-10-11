@@ -5,6 +5,9 @@ on:
       - labeled
 jobs:
   pr-pull:
+    permissions:
+      contents: write
+      pull-requests: write
     if: contains(github.event.pull_request.labels.*.name, 'pr-pull')
     runs-on: ubuntu-latest
     steps:
@@ -28,10 +31,4 @@ jobs:
         uses: Homebrew/actions/git-try-push@main
         with:
           token: ${{ github.token }}
-          branch: master
-
-      - name: Delete branch
-        if: github.event.pull_request.head.repo.fork == false
-        env:
-          BRANCH: ${{ github.event.pull_request.head.ref }}
-        run: git push --delete origin "$BRANCH"
+          branch: ${{ github.head_ref }}
