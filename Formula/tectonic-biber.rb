@@ -679,8 +679,8 @@ class TectonicBiber < Formula
                                "--install_path", "bindoc=#{man1}"
     system "./Build"
     system "./Build", "install"
-    bin.env_script_all_files libexec/"bin", PERL5LIB: runtime_perl5lib
-    bin.install "biber" => "tectonic-biber"
+    bin.env_script_all_files(libexec/"bin", PERL5LIB: runtime_perl5lib)
+    bin.install bin/"biber" => "tectonic-biber"
     (pkgshare/"test").install "t/tdata/annotations.bcf", "t/tdata/annotations.bib"
   end
 
