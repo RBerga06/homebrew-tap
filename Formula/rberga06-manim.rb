@@ -18,8 +18,6 @@ class Rberga06Manim < Formula
   depends_on "pkg-config"
   depends_on "py3cairo"
   depends_on "pygments"
-  depends_on "python-click"
-  depends_on "python-networkx"
   depends_on "python-setuptools"
   depends_on "scipy"
   # Optional dependencies
