@@ -1,8 +1,8 @@
 class TectonicBiber < Formula
   desc "Backend processor for BibLaTeX (Tectonic-compatible version)"
   homepage "https://sourceforge.net/projects/biblatex-biber/"
-  url "https://github.com/plk/biber/archive/refs/tags/v2.17.tar.gz"
-  sha256 "1ee7efdd8343e982046f2301c1b0dcf09e1f9a997ac86ed1018dcb41d04c9e88"
+  url "https://github.com/plk/biber/archive/refs/tags/v2.22.tar.gz"
+  sha256 "82adcff9e71b4fc02ad6132f9ccd79137ad390e4d3392c7f681a85246c0cdc01"
   license "Artistic-2.0"
 
   bottle do
